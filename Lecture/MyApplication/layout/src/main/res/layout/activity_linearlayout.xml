@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- LinearLayout 설명
+1.두 개 이상의 뷰 필요시 android:orientation="" 필요하고 ""안은
+가로(horizontal)나 세로(vertical) 방향으로 나열
+2.기존의 방향과 다른 방향을 하고 싶다면 LinearLayout를 중첩해서 사용
+  android:layout_weight="1" 을 통해 레이아웃 안에 여백을 차지
+ 3.가장 하단 위치를 위해 다른 것들이 상단 영억을 전부 차지하도록 구성할 때  LinearLayout를 중첩으로
+ 상단을 묶은 후 height=0dp로 주고 상단 android:layout_weight="1" 로 주면 된다.
+
+ 4.뷰 자체에 대한 정렬로 android:layout_gravity=""을 통해 배치 상,하,좌,우 위치를 조정한다.
+ 5.내부 컨텐츠 글씨 정렬(로 가운데) 정렬 android:gravity=""
+  -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn1"
+        android:layout_gravity="right"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn2"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1" >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="btn1"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="btn2"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="btn1"
+            android:layout_weight="1"
+            android:gravity="right"
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn2"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn1"
+
+        />
+
+</LinearLayout>

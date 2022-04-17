@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--RelativeLayout 설명
+    1.상대적배치로 상대 뷰에 위치를 기준으로 한다.
+    2.부모가 기준일때는 RelativeLayout을 루트 레이아웃으로 스마폰 크기와 같게 배치된다.
+    3.상단배치-  android:layout_alignParentTop="true" 하단배치-  android:layout_alignParentBottom="true"
+    중앙(세로)배치-  android:layout_centerVertical="true" 수평(중앙가로)배치-  android:layout_centerHorizontal="true"
+    왼쪽 배치- android:layout_alignParentLeft="true" 오른쪽 배치- android:layout_alignParentRight="true"
+
+     4.뷰를 기준일때는 위쪽 -android:layout_above="@id" 아래쪽- android:layout_below="@id"
+     오른쪽 - android:layout_toRightOf="@id"       왼쪽 - android:layout_toLeftOf="@id"
+
+     5.기준점 왼쪽- android:layout_alignLeft="@id/"  기준점 오른쪽- android:layout_alignRight="@id"
+     기준점 위 - android:layout_alignTop="@id/" 기준점-아래  - android:layout_alignBottom="@id/"
+     -->
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"/>
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"/>
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"/>
+    <Button
+        android:id="@+id/btn8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
+
+    <Button
+        android:id="@+id/btn9"
+        android:layout_width="234dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn9"
+        android:layout_toRightOf="@id/btn9"
+
+        android:layout_marginBottom="2dp"
+        android:text="btn"
+        android:layout_alignLeft="@id/btn9"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn"
+
+        android:layout_below="@id/btn9"
+        android:layout_toLeftOf="@id/btn9"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn"/>
+
+</RelativeLayout>

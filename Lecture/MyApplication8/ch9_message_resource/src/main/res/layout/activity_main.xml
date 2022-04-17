@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/app_name"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="133dp"
+        android:background="@drawable/round_btn" />
+</RelativeLayout>
+
+<!--
+1.string.xml에서 리소스 파일 추가 한글
+2.drawable.xml에서 리소스 파일 추가 버튼의 모양
+<solid android:color="@color/purple_200"></solid>로 색깔지정
+<corners 모서리 설정
+    android:topLeftRadius="150dp"
+    android:topRightRadius="150dp"/>
+    android:background="@drawable/로 적용하기
+3.themes에 백그라운드 색상 적용 : <style name="Theme.MyApplication8" parent="Theme.AppCompat.Light">
+4. 가로 세로 화면
+layout.xml파일에서 리소스 파일 추가 orientacitn에서 Landscape로 설정 폴더는 달라도 이름은 반드시 동일하게
+5.폰 애뮬레이터 방향 인지하도록 설정
+ 시계 보이는 영역을 마우스로 끌어 내린 후 시스템 트레이가 열리면 자동 회전 옵션(auto-rotate)
+6.한글 환경 설정
+앱 목록에서 settings 앱을 실행한 후 메뉴에서 system-lan-languages-add lanuages-한국어를 1번으로
+-->

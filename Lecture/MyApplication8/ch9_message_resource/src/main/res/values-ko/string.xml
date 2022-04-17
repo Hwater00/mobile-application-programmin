@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">메세지 리소스</string>
+</resources>
+
+<!--
+values에서 resouse파일 추가 locatdptj 한국ko선택하고 한글 string파일 만들기. 기존 파일명과 동일해야 함
+-->
