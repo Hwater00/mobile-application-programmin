@@ -55,14 +55,9 @@ class MainActivity : AppCompatActivity() {
             //Notification 알림 객체 builder속성
             builder.setSmallIcon(R.drawable.small)//스몰 아이콘
             builder.setWhen(System.currentTimeMillis()) //발생 시각
-            builder.setContentTitle("안녕하세요") //제목
-            builder.setContentText("모바일 앱 프로그래밍 시간입니다.") //내용-텍스트 출력
+            builder.setContentTitle("알림") //제목
+            builder.setContentText("모바일 앱 프로그래밍 중간고사") //내용-텍스트 출력
             //내용-이미지 출력
-            //큰 이미지는 BitmapFactory의 도움을 받아야함
-            val bigPic = BitmapFactory.decodeResource(resources, R.drawable.big)//BitmapFactory R.drawable.출력할 이미지를 비트맵 형식으로 지정
-            val builderStyle = NotificationCompat.BigPictureStyle() //builder 스타일 설정 변수
-            builderStyle.bigPicture(bigPic) //builder 스타일에 bigPic 적용
-            builder.setStyle(builderStyle)  //이렇게 만든 BigPicture 객체를 빌더의 setStyle()함수에 지정
 
             //인텐트
             val replyIntent = Intent(this,ReplyReceiver::class.java) //생성한Brodcast Reciver.kt
@@ -77,6 +72,15 @@ class MainActivity : AppCompatActivity() {
             }
 
 
+            //액션등록
+            builder.addAction(
+                NotificationCompat.Action.Builder(
+                    //인자 3개. 아이콘, 제목, 인텐트
+                    android.R.drawable.stat_notify_more,
+                    "답장",
+                    replyPendingIntent //이벤트 처리가 목적이므로 인텐트 등록w
+                ).addRemoteInput(remoteInput).build() //remoteInput으로 입력받지 않을땐 그냥 build만 사용
+            )
             //액션등록
             builder.addAction(
                 NotificationCompat.Action.Builder(

@@ -33,6 +33,7 @@
     android:topRightRadius="150dp"/>
     android:background="@drawable/로 적용하기
 3.themes에 백그라운드 색상 적용 : <style name="Theme.MyApplication8" parent="Theme.AppCompat.Light">
+
 4. 가로 세로 화면
 layout.xml파일에서 리소스 파일 추가 orientacitn에서 Landscape로 설정 폴더는 달라도 이름은 반드시 동일하게
 5.폰 애뮬레이터 방향 인지하도록 설정

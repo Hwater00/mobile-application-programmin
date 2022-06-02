@@ -5,6 +5,7 @@
     android:padding="20dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+--여러개 보일려면 layout_height="wrap_content"
 
     <ImageView
         android:layout_width="wrap_content"
@@ -16,4 +17,7 @@
         android:layout_height="wrap_content"
         android:textSize="16dp"
         android:id="@+id/item_tv"/>
+    --남아있는 전체
+   -- android:layout_width="0dp"
+    --android:layout_weight="1"
 </LinearLayout>

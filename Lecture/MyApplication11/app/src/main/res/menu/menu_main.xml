@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <!-- xmlns:app 네암스페이스 추가, 추가로 res-auto app:showAsaction 사용가능하도록 허용-->
     <!-- always 숨기지 않고 항상 액션바에 표시 ,
          ifRoom 공간이 있으면 액션바에 표현하라
          search veiw - app:actionViewClass androidx.appcompat.widget.SearchView"으로 연결
     -->
+    --순서2
     <item
         android:id="@+id/menu1"
         android:title="메뉴 1"/>
     <item
         android:id="@+id/menu2"
-        android:title="메뉴 1"
+        android:title="메뉴 2"
         android:icon="@android:drawable/ic_menu_add"
         />
+    --순서4 서치뷰 이용하기
     <item
         android:id="@+id/menu_search"
         android:title="검색"
